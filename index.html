@@ -12,10 +12,12 @@
         
         
         <div id="mapHere" style="position:relative;width:600px;height:400px;">
-            <img src = "sampleCode.loadmapasync.html" alt = "map"/>
+            
         </div>
 
         <script type = "text/javascript">
+            var mapp = $("<iframe>").attr("src", "sampleCode.loadmapasync.html");
+            $("#mapHere").append(mapp);
             
         </script>
 
