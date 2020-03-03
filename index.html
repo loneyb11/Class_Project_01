@@ -9,29 +9,14 @@
     </head>
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        
+        <div id="mapHere" style="position:relative;width:600px;height:400px;">
+            <img src = "sampleCode.loadmapasync.html" alt = "map"/>
+        </div>
+
         <script type = "text/javascript">
-            function CallRestService(request, callback) {
-                $.ajax({
-                    url: request,
-                    dataType: "jsonp",
-                    jsonp: "jsonp",
-                    success: function (r) {
-                        callback(r);
-                    },
-                    error: function (e) {
-                        alert(e.statusText);
-                    }
-                });
-            }
-            var geocodeRequest = "http://dev.virtualearth.net/REST/v1/Locations?query=" + encodeURIComponent("[Location to geocode]") + "&key=AvDZqS0UVZMp3dGWBuKqrIhtZJ7ObTZBHKPN4Rx9hxjV5AxgAztKmqXoKEFwZ9Cx";
-
-            CallRestService(geocodeRequest, GeocodeCallback);
-
-            function GeocodeCallback(result) {
-                // Do something with the result
-                console.log(result)
-            }
-
+            
         </script>
 
 
