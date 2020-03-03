@@ -1,13 +1,5 @@
 <!DOCTYPE html>
-
-<!--
-	Support this CSS Grid	-	cssgrid.co
--->
-
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
 <title>UTSA Downtown Campus Map</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -97,13 +89,10 @@
 	
 
 </div>
-<!-- / Welcome -->
-
-<h2></h2>
 
 <!-- 1 Column site with bing map in the viewport-->
 <div class="p1 clearfix">
-	<div class="one">
+	<div id="SDKmap" style="position:relative; height:400px; width:400px"></div>
 		<div>
 			<iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=29.423205130819042~-98.50333231010438&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
 			</iframe>
@@ -114,9 +103,7 @@
 	   </div>
 	</div>
 </div>
-<!-- / 1 Column -->
 
-<div id="SDKmap" style="position:relative; height:400px; width:400px"></div>
 
 	</div>
 </div>
