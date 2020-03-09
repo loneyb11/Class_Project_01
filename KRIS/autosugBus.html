@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>autosuggestbusinessHTML</title>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+        <style type='text/css'>body{margin:0;padding:0;overflow:hidden;font-family:'Segoe UI',Helvetica,Arial,Sans-Serif}</style>
+    </head>
+    <body>
+        <div id='printoutPanel'></div>
+        <div id='searchBoxContainer'><input type= 'text' id= 'searchBox'/></div>
+        
+        <div id='myMap' style='width: 100vw; height: 100vh;'></div>
+        <script type='text/javascript'>
+            function loadMapScenario() {
+                Microsoft.Maps.loadModule('Microsoft.Maps.AutoSuggest', {
+                    callback: onLoad,
+                    errorCallback: onError
+                });
+                function onLoad() {
+                    var options = { maxResults: 5, businessSuggestions: true };
+                    var manager = new Microsoft.Maps.AutosuggestManager(options);
+                    manager.attachAutosuggest('#searchBox', '#searchBoxContainer', selectedSuggestion);
+                }
+                function onError(message) {
+                    document.getElementById('printoutPanel').innerHTML = message;
+                }
+                function selectedSuggestion(suggestionResult) {
+                    document.getElementById('printoutPanel').innerHTML =
+                        'Suggestion: ' + suggestionResult.formattedSuggestion;
+                }
+                
+            }
+        </script>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?branch=experimental&key=YourBingMapsKey&callback=loadMapScenario' async defer></script>
+    </body>
+</html>
