@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+	<html lang="en"> 
+
+<head>
+<title>UTSA Downtown Campus Map</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- Favicon images -->
+
+<link href="http://www.cssgrid.co/css-grid/images/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
+
+<!-- SEO -->
+<meta name="keywords" content="UTSA, Downtown, campus, maps," />
+<meta name="description" content="an interactive map for searching building locations at UTSA Downtown Campus" />
+
+<!-- Make web page appear 1:1 on devices, allow scale -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Add - Home Screen for iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- CSS by cssgrid.co -->
+<link rel="stylesheet" type="text/css" media="all" href="css/cssgrid.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/header.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/prism.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+</head>
+<body>
+
+<!-- Header -->
+<header class="header-fixed nav-right clearfix">
+
+	<div class="logo">
+	<a href="index.html" title="Responsive CSS Grid"><strong>UTSA DOWNTOWN</strong> Map</a>
+	</div>
+
+	<div class="navclosed">
+		<div class="line-nav-1"></div>
+		<div class="line-nav-2"></div>
+		<div class="line-nav-3"></div>
+		<div class="line-nav-4"></div>
+	</div>
+	<div class="close-side"><a href="#"></a></div>
+
+	<!-- Nav -->
+	<nav class="nav">
+		<ul class="nav-buttons nav-off">
+			<li><a href="#">+ Buildings</a>
+				<ul>
+				<li><a href="beuna_vista_building_map_location">- Buena Vista Street Building</a></li>
+				<li><a href="durango_building_map_location">- Durango Building</a></li>
+				<li><a href="frio_building_map_location">- Frio Street Building</a></li>
+				<li><a href="monterey_building_map_location.html">- Monterey Building</a></li>
+				</ul>
+			</li>
+			<li><a href="#">+ Food and Amenities</a>
+				<ul>
+				<li><a href="food_court_location.html">- Food Court</a></li>
+				<li><a href="fitness_center_loation.html">- Fitness Center</a></li>
+				<li><a href="starbucks_location.html">- Starbucks</a></li>
+				</ul>
+			</li>
+			<li><a href="#">+ Parking</a>
+				<ul>
+				<li><a href="cattlemans_square_lot.html">- Cattleman Square Lot</a></li>
+				<li><a href="durango_lot.html">- Durango Lot</a></li>
+				<li><a href="monterey_lot.html">- Monterey Lot</a></li>
+				<li><a href="parking_garage.html">- DTC Garage</a></li>
+				<li><a href="lot_d1.html">- Lot D1</a></li>
+				<li><a href="lot_d2.html">- Lot D2</a></li>
+				<li><a href="lot_d3.html">- Lot D3</a></li>
+				</ul>
+		</ul>
+	</nav>
+	<!-- / Nav -->
+
+</header>
+<!-- / Header -->
+
+<!-- Wrapper -->
+<div class="wrapper styled">
+<div class="wrapper-padding max-width">
+
+<!-- Welcome -->
+<div class="welcome">
+
+	<h1>Welcome to UTSA Downtown Campus <strong>Maps</strong></h1>
+	
+
+</div>
+<!-- / Welcome -->
+
+<div class="column is-one-third has-text-left" id="search">
+	<div class="field">
+		<label class="label">Search</label>
+		<div class="control">
+			<input class="input is-medium" type="text">
+			<span></span>
+		</div>
+		
+
+
+<!-- 1 Column site with bing map in the viewport-->
+<div class="p1 clearfix">
+	<div class="one">
+		<div class="one">
+			<iframe width="700" height="400" frameborder="0" src="autosug.html">
+			</iframe>
+		
+		   <button class="btn btn-default" data-ng-disabled="submitButtonDisabled">
+            <span class="mask"></span>
+            <span>Nutrition Facts</span>
+			</button>
+			<button class="btn btn-default" data-ng-disabled="submitButtonDisabled">
+				<span class="mask"></span>
+				<span>Get Directions</span>
+				</button>
+	   </div>
+	</div>
+</div>
+<!-- / 1 Column -->
+
+
+
+	</div>
+</div>
+</footer>
+<!-- / Footer -->
+</script>
+<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?branch=experimental&key=AvDZqS0UVZMp3dGWBuKqrIhtZJ7ObTZBHKPN4Rx9hxjV5AxgAztKmqXoKEFwZ9Cx&callback=loadMapScenario' async defer></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/prism.js"></script>
+
+</body>
+</html>

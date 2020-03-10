@@ -1,0 +1,10 @@
+body{
+    border-width: 20px;
+    border-color: red;
+}
+#printoutPanel2{
+    overflow: scroll;
+}
+.dirLeg{
+    overflow: scroll;
+}

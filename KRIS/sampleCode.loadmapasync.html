@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loadmapasyncHTML</title>
+        <style type='text/css'>body{margin:0;padding:0;overflow:hidden;font-family:'Segoe UI',Helvetica,Arial,Sans-Serif}</style>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?branch=experimental&key=AvDZqS0UVZMp3dGWBuKqrIhtZJ7ObTZBHKPN4Rx9hxjV5AxgAztKmqXoKEFwZ9Cx'></script>
+        <script type='text/javascript'>
+                var map;
+                var loc;
+
+                
+                navigator.geolocation.getCurrentPosition(function(position){
+                    loc = new Microsoft.Maps.Location(position.coords.latitude, position.coords.longitude);
+                });
+
+                
+
+                //console.log(longitudeee);
+
+
+
+                function loadMapScenario() {
+                    map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+                        disableStreetside: true,
+                        disableAerial: true
+                    });
+                    map.setOptions({
+                        maxZoom: 22,
+                        minZoom: 18
+                    });
+                    Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
+                        var searchManager = new Microsoft.Maps.Search.SearchManager(map);
+
+                        var pushpin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(29.4226, -98.5025));
+                        var layer1 = new Microsoft.Maps.Layer();
+                        Microsoft.Maps.Events.addHandler(pushpin1, 'click', function () { 
+                            Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
+                                var directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
+                                // Set Route Mode to walking
+                                directionsManager.setRequestOptions({ routeMode: Microsoft.Maps.Directions.RouteMode.walking });
+                                var waypoint1 = new Microsoft.Maps.Directions.Waypoint({ location: new Microsoft.Maps.Location(29.4226, -98.5025) });
+                                //gettingLoc();
+                                var waypoint2 = new Microsoft.Maps.Directions.Waypoint({ location: loc});
+                                directionsManager.addWaypoint(waypoint1);
+                                directionsManager.addWaypoint(waypoint2);
+                                // Set the element in which the itinerary will be rendered
+                                directionsManager.setRenderOptions({ itineraryContainer: document.getElementById('printoutPanel') });
+                                directionsManager.calculateDirections();
+                            });
+                        });
+                        layer1.add(pushpin1);
+                        map.layers.insert(layer1);
+
+                        var pushpin2 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(29.4225, -98.5026));
+                        var layer2 = new Microsoft.Maps.Layer();
+                        //pushpin1.addHandler(layer1, 'click', function () { highlight('click'); });
+                        layer2.add(pushpin2);
+                        map.layers.insert(layer2);
+
+
+                        /*var reverseGeocodeRequestOptions = {
+                            location: new Microsoft.Maps.Location(29.4226, -98.5025),
+                            callback: function (answer, userData) {
+                                map.setView({ bounds: answer.bestView });
+                                map.entities.push(new Microsoft.Maps.Pushpin(reverseGeocodeRequestOptions.location));
+                                document.getElementById('printoutPanel').innerHTML =
+                                    answer.address.formattedAddress;
+                            }
+                        };
+                        searchManager.reverseGeocode(reverseGeocodeRequestOptions);*/
+
+                    
+                    });
+
+                }
+                
+            
+        </script>
+    </head>
+    <body onload='loadMapScenario();'>
+        <div id='printoutPanel'></div>
+        
+        <div id='myMap' style='width: 100vw; height: 100vh;'></div>
+    </body>
+</html>
