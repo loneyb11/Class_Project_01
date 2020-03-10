@@ -1,6 +1,6 @@
 var map;
 
-function loadMapScenario(){
+function loadMapScenario() {
     map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
 
 
