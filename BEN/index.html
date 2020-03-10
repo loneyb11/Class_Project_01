@@ -1,131 +1,120 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<!--
-	Support this CSS Grid	-	cssgrid.co
--->
 
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-<title>UTSA Downtown Campus Map</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Downtown San Antonio Map</title>
+	<!-- Bulma Version 0.8.x-->
+	<link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e66f0ba840c9b001387645f&product=inline-share-buttons" async="async"></script>
 
-<!-- Favicon images -->
-<link href="http://www.cssgrid.co/css-grid/images/favicon-16x16.png" sizes="16x16" rel="shortcut icon" type="image/png">
-<link href="http://www.cssgrid.co/css-grid/images/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
-<link href="http://www.cssgrid.co/css-grid/images/favicon-32x32.png" sizes="32x32" rel="shortcut icon" type="image/png">
-<link href="http://www.cssgrid.co/css-grid/images/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
-
-<!-- SEO -->
-<meta name="keywords" content="UTSA, Downtown, campus, maps," />
-<meta name="description" content="an interactive map for searching building locations at UTSA Downtown Campus" />
-
-<!-- Make web page appear 1:1 on devices, allow scale -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<!-- Add - Home Screen for iOS -->
-<meta name="apple-mobile-web-app-capable" content="yes" />
-
-<!-- CSS by cssgrid.co -->
-<link rel="stylesheet" type="text/css" media="all" href="css/cssgrid.css" />
-<link rel="stylesheet" type="text/css" media="all" href="css/header.css" />
-<link rel="stylesheet" type="text/css" media="all" href="css/prism.css" />
 
 </head>
+
 <body>
+	<style>
+		body {
+			background-image: url('assets/images/satx_blur.jpg');
+		}
 
-<!-- Header -->
-<header class="header-fixed nav-right clearfix">
-
-	<div class="logo">
-	<a href="index.html" title="Responsive CSS Grid"><strong>UTSA DOWNTOWN</strong> Map</a>
-	</div>
-
-	<div class="navclosed">
-		<div class="line-nav-1"></div>
-		<div class="line-nav-2"></div>
-		<div class="line-nav-3"></div>
-		<div class="line-nav-4"></div>
-	</div>
-	<div class="close-side"><a href="#"></a></div>
-
-	<!-- Nav -->
-	<nav class="nav">
-		<ul class="nav-buttons nav-off">
-			<li><a href="#">+ Buildings</a>
-				<ul>
-				<li><a href="beuna_vista_building_map_location">- Buena Vista Street Building</a></li>
-				<li><a href="durango_building_map_location">- Durango Building</a></li>
-				<li><a href="frio_building_map_location">- Frio Street Building</a></li>
-				<li><a href="monterey_building_map_location.html">- Monterey Building</a></li>
-				</ul>
-			</li>
-			<li><a href="#">+ Food and Amenities</a>
-				<ul>
-				<li><a href="food_court_location.html">- Food Court</a></li>
-				<li><a href="fitness_center_loation.html">- Fitness Center</a></li>
-				<li><a href="starbucks_location.html">- Starbucks</a></li>
-				</ul>
-			</li>
-			<li><a href="#">+ Parking</a>
-				<ul>
-				<li><a href="cattlemans_square_lot.html">- Cattleman Square Lot</a></li>
-				<li><a href="durango_lot.html">- Durango Lot</a></li>
-				<li><a href="monterey_lot.html">- Monterey Lot</a></li>
-				<li><a href="parking_garage.html">- DTC Garage</a></li>
-				<li><a href="lot_d1.html">- Lot D1</a></li>
-				<li><a href="lot_d2.html">- Lot D2</a></li>
-				<li><a href="lot_d3.html">- Lot D3</a></li>
-				</ul>
-		</ul>
+		#MicrosoftNav {
+			position: relative;
+		}
+	</style>
+	<!-- START NAV -->
+	<nav class="navbar">
+		<div class="container">
+			<div class="navbar-brand">
+				<h1>Welcome to UTSA Downtown Campus <span style="color: #ffffff;">Maps</span></h1>
+				</a>
+				<span class="navbar-burger burger" data-target="navbarMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</div>
+			<div id="navbarMenu" class="navbar-menu">
+				<div class="navbar-end">
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link"><span style="color: #ffffff">Account</span></a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item">Dashboard</a>
+							<a class="navbar-item">Profile</a>
+							<a class="navbar-item">Settings</a>
+							<hr class="navbar-divider">
+							<div class="navbar-item">Return to home</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</nav>
-	<!-- / Nav -->
+	<!-- END NAV -->
+	<section id="main" class="hero is-fullheight">
+		<div class="hero-body">
+			<div class="container has-text-centered" style="margin-top:75px;">
+				<div class="columns is-6 is-vcentered">
+					<div class="column is-two-thirds has-text-left" id="myMap" style="width: is-6; height: 100vh;"">
+						
+					</div>
+					<div style=" border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:100vh; overflow-x: scroll; width:
+						is-6; background-color: bisque; ">
+					<div class=" column is-6 is-vcentered" style="width: auto;">
+						<div class=" box" id="printoutPanel" style="width: 300px;" id="searchBoxContainer">
+							<placeholder>" Search establisment, street or attraction</placeholder>" </div> <div class="control">
+						
+<<<<<<< HEAD
+								<div id='searchBoxContainer'><input class="input" id="searchBox" style="width: 250px;" type="text" placeholder="Search..."></div>
+=======
+						<div id='searchBoxContainer'><input class="input" id="searchBox" style="width: 250px;" type="text" placeholder="Search..."></div>
+>>>>>>> 2ba1af6ef9d89cdb08ba36936d4139dcca97d0f9
+						<div class="field" id="printoutPanel2" style="overflow-y: scroll; height:700px;
+								 overflow-x: scroll;">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		<div class="column">
+			<div class="box">
+				<p class="has-text-centered"><div class="sharethis-inline-share-buttons"></div>
+				</p>
+			</div>
 
-</header>
-<!-- / Header -->
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="content has-text-centered">
+				<p>
+					<strong>Class Project 01 | UTSA Coding Bootcamp 2020</strong> by Kristian | Hector | Ben
+					<br />
+					<a href="https://github.com/loneyb11/Class_Project_01">
+						<img src="assets/images/github.svg" style="width: 25px; height: 25px;"></a>
 
-<!-- Wrapper -->
-<div class="wrapper styled">
-<div class="wrapper-padding max-width">
+			</div>
+		</div>
+	</footer>
 
-<!-- Welcome -->
-<div class="welcome">
-
-	<h1>Welcome to UTSA Downtown Campus <strong>Maps</strong></h1>
-	
-
-</div>
-<!-- / Welcome -->
-
-<h2></h2>
-
-<!-- 1 Column site with bing map in the viewport-->
-<div class="p1 clearfix">
-	<div class="one">
-		<div>
-			<iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=29.423205130819042~-98.50333231010438&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
-			</iframe>
-			<div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
-			   <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=29.423205130819042~-98.50333231010438&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
-			   <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=29.423205130819042~-98.50333231010438&amp;sty=r&amp;lvl=16&amp;rtp=~pos.29.423205130819042_-98.50333231010438____&amp;FORM=MBEDLD">Get Directions</a>
-		   </div>
-	   </div>
-	</div>
-</div>
-<!-- / 1 Column -->
-
-<div id="SDKmap" style="position:relative; height:400px; width:400px"></div>
-
-	</div>
-</div>
-</footer>
-<!-- / Footer -->
-<script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
-<script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
-<script type="text/javascript" src="js/functions.js"></script>
-<script type="text/javascript" src="js/prism.js"></script>
+<<<<<<< HEAD
+	<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?branch=experimental&key=AsLRq4I-N05HhNL3pxKWuZM3o0mK_FsO8a01LZm19UPEaGMsQWS8U-k8POy4PDcJ&callback=loadMapScenario' async defer></script>
+	<script type="text/javascript" src="map.js"></script>
+=======
+	<script type='text/javascript'
+		src='https://www.bing.com/api/maps/mapcontrol?branch=experimental&key=AvDZqS0UVZMp3dGWBuKqrIhtZJ7ObTZBHKPN4Rx9hxjV5AxgAztKmqXoKEFwZ9Cx&callback=loadMapScenario'
+		async defer></script>
+	<script type="text/javascript" src="./map.js"></script>
+>>>>>>> 2ba1af6ef9d89cdb08ba36936d4139dcca97d0f9
 </body>
+
 </html>
