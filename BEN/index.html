@@ -13,6 +13,7 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e66f0ba840c9b001387645f&product=inline-share-buttons" async="async"></script>
 
 
 </head>
@@ -21,6 +22,10 @@
 	<style>
 		body {
 			background-image: url('assets/images/satx_blur.jpg');
+		}
+
+		#MicrosoftNav {
+			position: relative;
 		}
 	</style>
 	<!-- START NAV -->
@@ -65,7 +70,7 @@
 						<div class=" box" id="printoutPanel" style="width: 300px;" id="searchBoxContainer">
 							<placeholder>" Search establisment, street or attraction</placeholder>" </div> <div class="control">
 						
-						<input class="input" id="searchBox" style="width: 250px;" type="text" placeholder="Search...">
+								<div id='searchBoxContainer'><input class="input" id="searchBox" style="width: 250px;" type="text" placeholder="Search..."></div>
 						<div class="field" id="printoutPanel2" style="overflow-y: scroll; height:700px;
 								 overflow-x: scroll;">
 						</div>
@@ -78,7 +83,7 @@
 		</div>
 		<div class="column">
 			<div class="box">
-				<p class="has-text-centered">Presented to you by Kristian, Hector & Ben.
+				<p class="has-text-centered"><div class="sharethis-inline-share-buttons"></div>
 				</p>
 			</div>
 
@@ -97,9 +102,7 @@
 		</div>
 	</footer>
 
-	<script type='text/javascript'
-		src='https://www.bing.com/api/maps/mapcontrol?branch=experimental&key=AvDZqS0UVZMp3dGWBuKqrIhtZJ7ObTZBHKPN4Rx9hxjV5AxgAztKmqXoKEFwZ9Cx&callback=loadMapScenario'
-		async defer></script>
+	<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?branch=experimental&key=AsLRq4I-N05HhNL3pxKWuZM3o0mK_FsO8a01LZm19UPEaGMsQWS8U-k8POy4PDcJ&callback=loadMapScenario' async defer></script>
 	<script type="text/javascript" src="map.js"></script>
 </body>
 
