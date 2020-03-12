@@ -5,6 +5,10 @@ body{
 #printoutPanel2{
     overflow: scroll;
 }
-.dirLeg{
+/*.dirLeg{
     overflow: scroll;
+}*/
+
+@media (max-width:500px){
+
 }
