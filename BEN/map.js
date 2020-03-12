@@ -6,7 +6,11 @@ function loadMapScenario(){
         /* No need to set credentials if already passed in URL */
         center: new Microsoft.Maps.Location(29.4241, -98.4936),
         //29.4241, -98.4936
-        zoom: 12
+        zoom: 12,
+        disableStreetside: true,
+        disableBirdseye: true,
+        showMapTypeSelector: false,
+        showLogo: false
     });
 
     Microsoft.Maps.loadModule('Microsoft.Maps.AutoSuggest', function () {
